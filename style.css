@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: rgb(20, 20, 20);
+}
+nav{
+    height: auto;
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 48px 100px 0px;
+}
+.nav-container{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(216, 216, 216);
+}
+.nav-container > h1{
+    order: 1;
+    font-size: 1.7rem;
+    margin-left: 2em;
+}
+.buttons-res{
+    display: none;
+}
+.buttons{
+    order:2;
+    display: flex;
+    gap:40px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.buttons > p{
+    cursor: pointer;
+    transition: color ease-out 0.2s;
+}
+.buttons > p:hover{
+    color:rgb(224, 24, 117);
+    transition: color ease-out 0.2s;
+}
+.media{
+    order: 3;
+    display: flex;
+    font-size: 1.2rem;
+    gap:30px;
+    margin:0 2em;
+}
+.media > i {
+    cursor: pointer;
+    margin: 5px;
+    transition: color ease-out 0.2s;
+}
+.media > i:hover{
+    color:rgb(224, 24, 117);
+    transition: color ease-out 0.2s;
+}
+.bars{
+    order:4;
+    display: none;
+    margin:0 2em;
+    font-size: 1.2rem;
+}
+@media only screen and (max-width: 955px){
+    .nav-container{
+        height: auto;
+        padding: 30px 0;
+    }
+    .buttons{
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        margin: 0 2em;
+        align-self: flex-end;
+    }
+    .buttons-res-on{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        gap:30px;
+        background:rgb(216, 216, 216);
+        padding: 30px 0;
+        z-index: 999;
+        transform-origin:  top;
+        animation: loadList 0.2s ease-in-out forwards;
+    }
+    .buttons-res{
+        display: none;
+        transform: scale(0, 0);
+    }
+    .buttons-res>p{
+        cursor: pointer;
+        transition: color ease-out 0.2s;
+    }
+    .buttons-res >p:hover{
+        color:rgb(224, 24, 117);
+        transition: color ease-out 0.2s;
+    }
+    .media{
+        display: none;
+    }
+    .bars{
+        display: block;
+        cursor: pointer;
+        transition: color ease-out 0.2s;
+    }
+    .bars:hover{
+        color:rgb(224, 24, 117);
+        transition: color ease-out 0.2s;
+    }
+}
+
+@keyframes loadList{
+    100%{
+        transform: scale(1, 1);
+    }
+    0%{
+        transform: scale(1, 0);
+    }
+}
